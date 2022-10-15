@@ -1,0 +1,47 @@
+ //Önceden sabit olarak girilmiş bir sayıyı,
+            //kullanıcının kaç kerede tahmin ettiğini gösteren tahmin oyununun kodunu yazın.
+
+            //Her sayı istediğinde kaçıncı sayıyı istediğini de yazsın.
+
+            //Kullanıcı, sayıyı bulması için yönlendirilsin;
+            //Sabit sayıdan daha büyük bir sayı girilmişse “Daha küçük bir sayı girin” yazsın.
+            //Sabit sayıdan daha küçük bir sayı girilmişse “Daha büyük bir sayı girin” yazsın.
+
+            //7 tahminde sayıyı bilemezse oyun bitsin.
+
+            Random rnd = new Random();
+
+            int sabit = rnd.Next(1,100);
+            int tahmin;
+            int sayac = 0;
+
+            do
+            {
+                sayac = sayac + 1;
+
+                Console.Write(sayac + ". sayıyı girin : ");
+                tahmin = int.Parse(Console.ReadLine());
+
+                if (tahmin < sabit && sayac!=7)
+                {
+                    Console.WriteLine("Daha büyük bir sayı girin.");
+                }
+                else if (tahmin > sabit && sayac!=7)
+                {
+                    Console.WriteLine("Daha küçük bir sayı girin.");
+                }
+
+
+            } while (tahmin != sabit && sayac < 7);
+
+            if (sabit==tahmin)
+            {
+                Console.WriteLine("Sayı " + sayac + " adet denemede bulundu. Tebrikler");
+            }
+            else
+            {
+                Console.WriteLine("Deneme hakknıız kalmadı kaybettiniz.");
+
+            }
+
+            Console.WriteLine("bulunmaya çalışan sayı : " + sabit);
