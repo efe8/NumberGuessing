@@ -1,13 +1,3 @@
- //Önceden sabit olarak girilmiş bir sayıyı,
-            //kullanıcının kaç kerede tahmin ettiğini gösteren tahmin oyununun kodunu yazın.
-
-            //Her sayı istediğinde kaçıncı sayıyı istediğini de yazsın.
-
-            //Kullanıcı, sayıyı bulması için yönlendirilsin;
-            //Sabit sayıdan daha büyük bir sayı girilmişse “Daha küçük bir sayı girin” yazsın.
-            //Sabit sayıdan daha küçük bir sayı girilmişse “Daha büyük bir sayı girin” yazsın.
-
-            //7 tahminde sayıyı bilemezse oyun bitsin.
 
             Random rnd = new Random();
 
